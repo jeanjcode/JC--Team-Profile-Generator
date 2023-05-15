@@ -1,0 +1,23 @@
+.team-heading {
+  background-color: #d5bdaf;
+}
+
+.card-header {
+  background-color: #e3d5ca;
+}
+
+.card-body {
+  background-color: #f5ebe0;
+}
+
+.card {
+  box-shadow: 2px 2px 2px;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* #d0b6b3
+F3D5B5
+c3a29e */
