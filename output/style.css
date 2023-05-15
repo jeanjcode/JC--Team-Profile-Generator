@@ -12,12 +12,11 @@
 
 .card {
   box-shadow: 2px 2px 2px;
+  margin: 110px auto;
+  justify-content: space-evenly;
+  display: flex;
 }
 
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-/* #d0b6b3
-F3D5B5
-c3a29e */
