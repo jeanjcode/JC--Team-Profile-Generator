@@ -57,8 +57,8 @@ function renderTeam() {
       {
         type: "list",
         name: "roles",
-        message: "Add another role.",
-        choices: ["Engineer", "Intern", "Finished building the team"],
+        message: "Add another role, or select finish",
+        choices: ["Add Engineer", "Add Intern", "Finished building my team"],
       },
     ])
     .then((answers) => {
@@ -80,7 +80,7 @@ function engineerPrompts() {
       {
         type: "input",
         name: "name",
-        message: "Enter engineer's name.",
+        message: "Enter the engineer's name.",
       },
       {
         type: "input",
@@ -112,4 +112,51 @@ function engineerPrompts() {
 
 // Intern Prompts
 
-//
+function internPrompts() {
+  inquirer
+    .prompt([
+      {
+        type: "input",
+        name: "name",
+        message: "Enter the intern's name.",
+      },
+      {
+        type: "input",
+        name: "id",
+        message: "Enter the intern's ID.",
+      },
+      {
+        type: "input",
+        name: "email",
+        message: "Enter the intern's email.",
+      },
+      {
+        type: "input",
+        name: "school",
+        message: "Enter the intern's school.",
+      },
+    ])
+    .then((answers) => {
+      const intern = new Intern(
+        answers.name,
+        answers.id,
+        answers.email,
+        answers.school
+      );
+      teamMembers.push(intern);
+      renderTeam();
+    });
+}
+
+const writeFile = () => {
+  fs.writeFileSync("./output/team.html", renderTemplate(teamMembers), (err) => {
+    if (err) {
+      console.log(err);
+      return;
+    } else {
+      console.log("Team profile has been generated");
+    }
+  });
+};
+
+managerPrompts();
