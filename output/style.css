@@ -12,9 +12,10 @@
 
 .card {
   box-shadow: 2px 2px 2px;
-  margin: 110px auto;
+  margin: 70px auto;
   justify-content: space-evenly;
   display: flex;
+  margin: 15px;
 }
 
 body {
