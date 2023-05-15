@@ -57,8 +57,8 @@ function renderTeam() {
       {
         type: "list",
         name: "roles",
-        message: "Add another role, or select finish",
-        choices: ["Add Engineer", "Add Intern", "Finished building my team"],
+        message: "Select a role or click finish.",
+        choices: ["Engineer", "Intern", "Finish"],
       },
     ])
     .then((answers) => {
@@ -70,7 +70,7 @@ function renderTeam() {
         writeFile();
       }
     });
-}
+};
 
 // Engineer Prompts
 
