@@ -11,7 +11,6 @@ const fs = require("fs");
 
 const teamMembers = [];
 
-
 // TODO: Write Code to gather information about the development team members, and render the HTML file.
 
 //  Manager Prompts
@@ -22,7 +21,7 @@ function managerPrompts() {
       {
         type: "input",
         name: "name",
-        message: " Enter the manager's name.",
+        message: "Let's start building your team. \n Enter the manager's name.",
       },
       {
         type: "input",
@@ -53,36 +52,64 @@ function managerPrompts() {
 }
 
 function renderTeam() {
-    inquirer
-      .prompt([
-        {
-          type: "list",
-          name: "roles",
-          message: "Add another role.",
-          choices: ["Engineer", "Intern", "Finished my selection"],
-        },
-      ])
-      .then((answers) => {
-        if (answers.roles === "Engineer") {
-          engineerPrompts();
-        } else if (answers.roles === "Intern") {
-          internPrompts();
-        } else {
-          writeFile();
-        }
-      });
-  };
+  inquirer
+    .prompt([
+      {
+        type: "list",
+        name: "roles",
+        message: "Add another role.",
+        choices: ["Engineer", "Intern", "Finished building the team"],
+      },
+    ])
+    .then((answers) => {
+      if (answers.roles === "Engineer") {
+        engineerPrompts();
+      } else if (answers.roles === "Intern") {
+        internPrompts();
+      } else {
+        writeFile();
+      }
+    });
+}
 
 // Engineer Prompts
 
+function engineerPrompts() {
+  inquirer
+    .prompt([
+      {
+        type: "input",
+        name: "name",
+        message: "Enter engineer's name.",
+      },
+      {
+        type: "input",
+        name: "id",
+        message: "Enter the engineer's ID.",
+      },
+      {
+        type: "input",
+        name: "email",
+        message: "Enter the engineers's email.",
+      },
+      {
+        type: "input",
+        name: "gitUsername",
+        message: "Enter the engineer's GitHub Username.",
+      },
+    ])
+    .then((answers) => {
+      const engineer = new Engineer(
+        answers.name,
+        answers.id,
+        answers.email,
+        answers.gitUsername
+      );
+      teamMembers.push(engineer);
+      renderTeam();
+    });
+}
 
-// Intern Prompts   
-
-
+// Intern Prompts
 
 //
-
-
-
-
-
