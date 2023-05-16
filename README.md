@@ -8,7 +8,7 @@ The JC README Generator is a command-line application that takes in information 
 
 ## Installation
 
-Make sure that your project includes a package.json with the required dependencies. You can create one by running `npm i` when you first set up the project, before installing any dependencies:
+Ensure sure that your project includes a package.json with the required dependencies. You can create one by running `npm i` when you first set up the project before installing any dependencies:
 
 - Run `npm i` to set up the project
 
@@ -26,7 +26,7 @@ The application will be invoked by using the following command:
 
 1. Right click on `index.js` and select 'Open in Integrated Terminal'.
 
-2. Type `node index.js` and enter.
+2. Type in `node index.js` and enter.
 
 3. You will be given a series of prompts to help build your team, you will have to choice to add a team manager, engineer/s and intern/s.
 
@@ -37,7 +37,6 @@ The application will be invoked by using the following command:
 
 
 ## Screenshots
-<br>
 
 An example of the prompts the user can select from:
 ![JC Team Profile Generator](./assets/images/terminal%20prmpts.png)
