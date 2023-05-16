@@ -43,7 +43,7 @@ An example of the prompts the user can select from:
 
 <br>
 
-Sample `team.html` file in the output folder:
+A sample `team.html` file in the output folder:
 
 ![JC Team Profile Generator](./assets/images/My%20Team.png)
  
