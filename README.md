@@ -39,7 +39,7 @@ The application will be invoked by using the following command:
 ## Screenshots
 <br>
 
-
+An example of the prompts the user can select from:
 ![JC Team Profile Generator](./assets/images/terminal%20prmpts.png)
 
 <br>
